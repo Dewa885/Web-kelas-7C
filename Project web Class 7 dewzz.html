@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas 7C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#ADD8E6; /* Biru muda lembut */
+            color: #00695c; /* Hijau gelap untuk kontras rendah tapi terbaca */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #FFFF; /* Putih untuk kontras lembut */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #004d40; /* Hijau lebih gelap untuk judul */
+        }
+        .password-section {
+            margin-bottom: 20px;
+        }
+        input[type="password"], input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #b2dfdb; /* Border hijau muda */
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4db6ac; /* Hijau muda */
+            color: LightGray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #26a69a; /* Hijau lebih gelap saat hover */
+        }
+        .content {
+            display: none; /* Sembunyikan konten utama sampai password benar */
+        }
+        .teacher {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #004d40;
+        }
+        .students {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .student {
+            background-color: #f1f8e9; /* Hijau sangat muda */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #c8e6c9; /* Border hijau lembut */
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #004d40;
+        }
+        .toggle-password {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="password-section">
+            <h1>Masuk ke Website Kelas 7C</h1>
+            <input type="password" id="password" placeholder="Masukkan password">
+            <button onclick="checkPassword()">Akses</button>
+            <div class="toggle-password">
+                <input type="checkbox" id="showPassword" onclick="togglePassword()"> Tampilkan Password
+            </div>
+        </div>
+        <div class="content" id="content">
+            <h1>Selamat Datang di Website Kelas 7C!</h1>
+            <div class="teacher">
+                Wali Kelas:Winda Syarifatul Hidayah
+                Ketua Kelas:Azmi Asta Dewa
+                <div>
+                  Wakil Ketua:Dede Taliat
+                  <div>
+                  Bendahara:Jajang Mahesa
+                  <div>
+                  Sekertaris:Ega Anugrah Ramadan<br>
+                
+            </div>
+            <p>Kelas kami terdiri dari 38 siswa yang hebat. Berikut daftar siswa:</p>
+            <div class="students">
+                <!-- Daftar 38 siswa fiktif (nama-nama Indonesia umum) -->
+                <div class="student">1. Agung Suryana</div>
+                <div class="student">2. Alpin Maulana</div>
+                <div class="student">3. Andini Anggraini</div>
+                <div class="student">4. Anisa Maharani</div>
+                <div class="student">5. Aulia Pur Namasari</div>
+                <div class="student">6. Azmi Asta Dewa</div>
+                <div class="student">7. Charisa Nur Maulia</div>
+                <div class="student">8. Dede Taliat</div>
+                <div class="student">9. Ega Anugrah Ramadan</div>
+                <div class="student">10. Egi Khoirul Waro</div>
+                <div class="student">11. Hani Akila Nurahman</div>
+                <div class="student">12. Irma Nirmala</div>
+                <div class="student">13. Irma Sabrina</div>
+                <div class="student">14. Jajang Mahesa</div>
+                <div class="student">15. M.Ikhsan Pratama</div>
+                <div class="student">16. Maisya Nabila</div>
+                <div class="student">17. Marta Mei Wulandari</div>
+                <div class="student">18. M.Dede Afrizal</div>
+                <div class="student">19. M.Al-Gojali</div>
+                <div class="student">20. M.Davik Supriyadi</div>
+                <div class="student">21. M.Irfanda</div>
+                <div class="student">22. M.Jeassen Al-Fikri</div>
+                <div class="student">23. M.Lili Rohili</div>
+                <div class="student">24. M.Rifki</div>
+                <div class="student">25. M.Herza Yuda</div>
+                <div class="student">26. Nesti Liana Sari</div>
+                <div class="student">27. Nur Padilah</div>
+                <div class="student">28. Nur Anisa</div>
+                <div class="student">29. Pahri Firmansyah</div>
+                <div class="student">30. Rahmatul Hasanah</div>
+                <div class="student">31. Rahmawati</div>
+                <div class="student">32. Saba Aldin</div>
+                <div class="student">33. Siti Maharani</div>
+                <div class="student">34. Siti Nurlaila</div>
+                <div class="student">35. Siti Silvi</div>
+                <div class="student">36. Tifany</div>
+                <div class="student">37. Widia Sari</div>
+                <div class="student">38. Yolanda</div>
+            </div>
+            <div class="footer">
+                Ⓒ 𝖣𝖾𝗐𝗓𝗓𝖭𝗈𝗍𝖣𝖾𝗏 𝟤𝟢𝟤𝟨
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = '7C Gaya Bebas'; // Password sesuai permintaan
+            if (password === correctPassword) {
+                document.getElementById('content').style.display = 'block';
+                document.querySelector('.password-section').style.display = 'none';
+            } else {
+                alert('Password salah! Coba lagi.');
+            }
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const checkbox = document.getElementById('showPassword');
+            if (checkbox.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>
